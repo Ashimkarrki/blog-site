@@ -1,0 +1,19 @@
+.register__button {
+  width: 17rem;
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: $white;
+  text-transform: uppercase;
+  &--blue {
+    background-color: $blue;
+    &:hover {
+      color: $blue;
+      background-color: $white;
+      transition: color, background-color 400ms ease;
+    }
+  }
+  &--black {
+    color: black;
+  }
+}

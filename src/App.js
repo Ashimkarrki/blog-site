@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Rightsidebar from "./component/Rightsidebar";
+import Sidebar from "./component/Sidebar";
+import Signin from "./component/Signin";
+import Signup from "./component/Signup";
+import Input from "./component/textEditor/Input";
+import "./sass/main.scss";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input />
     </div>
   );
 }

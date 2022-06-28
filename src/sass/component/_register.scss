@@ -1,0 +1,38 @@
+.register__container {
+  width: 100%;
+  height: 41.2rem;
+  display: grid;
+  place-items: center;
+}
+.register {
+  padding: 1rem;
+  border: solid 1px rgb(118, 146, 170);
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  &__access {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__or,
+  &__signin {
+    text-align: center;
+  }
+}
+.relative {
+  position: relative;
+}
+.icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}

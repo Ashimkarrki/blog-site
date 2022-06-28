@@ -1,0 +1,24 @@
+.input {
+  min-height: 41.6rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 3rem;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.plate-h1 {
+  font-size: 1.875rem;
+  font-weight: 200;
+
+  line-height: 2rem;
+}
+.plate-blockquote {
+  margin: 0rem;
+  color: grey;
+  border-left: 3px solid grey;
+  padding-left: 1rem;
+}
