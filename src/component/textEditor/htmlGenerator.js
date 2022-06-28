@@ -1,6 +1,6 @@
 const block = (node) => {
   const arrayOfHtmlTag = node.map(({ type, children, ...args }, index) => {
-    const lol = children.map((s, index) =>
+    const markedTag = children.map((s, index) =>
       mark(s.text, index, ...Object.keys(s))
     );
     let headerTag;
@@ -15,13 +15,13 @@ const block = (node) => {
               className="plate-p"
               style={{ textAlign: args.align }}
             >
-              {lol}
+              {markedTag}
             </p>
           );
         } else {
           headerTag = (
             <p className="plate-p" key={index}>
-              {lol}{" "}
+              {markedTag}
             </p>
           );
         }
@@ -34,19 +34,21 @@ const block = (node) => {
               key={index}
               style={{ textAlign: args.align }}
             >
-              {lol}
+              {markedTag}
             </h1>
           );
         } else {
           headerTag = (
             <h1 className="plate-h1" key={index}>
-              {lol}
+              {markedTag}
             </h1>
           );
         }
         return headerTag;
       case "blockquote":
-        headerTag = <blockquote className="plate-blockquote">{lol}</blockquote>;
+        headerTag = (
+          <blockquote className="plate-blockquote">{markedTag}</blockquote>
+        );
         return headerTag;
       case "ul":
         children.forEach((f) => {
