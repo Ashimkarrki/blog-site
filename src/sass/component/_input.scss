@@ -4,6 +4,17 @@
   margin: 0 auto;
   margin-top: 5rem;
   padding: 3rem;
+  &__input {
+    border: none;
+    font-size: 2rem;
+    // color: $blue;
+    padding: 1rem;
+    border-left: $side-bar-border;
+    &:focus {
+      outline: none;
+    }
+    margin-bottom: 1rem;
+  }
 }
 .toolbar {
   display: flex;

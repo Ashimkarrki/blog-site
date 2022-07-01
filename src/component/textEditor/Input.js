@@ -23,7 +23,14 @@ const Input = () => {
 
   return (
     <div className="input">
+      <ul>
+        <li>Logo</li>
+        <li>
+          <button>Submit</button>
+        </li>
+      </ul>
       <Toolbar />
+      <input placeholder="TITLE" className="input__input" />
       <Plate
         initialValue={intialValue}
         onChange={(val) => setDebugValue(val)}

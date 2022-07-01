@@ -1,0 +1,14 @@
+.notloggedinsidebar {
+  background-color: $side-bar;
+  color: $blue;
+  display: flex;
+  padding: 1.8rem 3rem;
+  &--left {
+    margin-right: auto;
+  }
+  border-bottom: $side-bar-border;
+  gap: 2rem;
+  .notloggedinsidebar__item:hover {
+    cursor: pointer;
+  }
+}
