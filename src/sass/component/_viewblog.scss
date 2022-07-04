@@ -1,0 +1,105 @@
+.renderedBlog {
+  width: 70%;
+  margin: 0 25% 0 5%;
+  padding: 8rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: antiquewhite;
+  &_button {
+    align-self: flex-end;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 0.7rem;
+    cursor: pointer;
+  }
+}
+.publish {
+  min-height: 100vh;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  &__bottom {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    position: relative;
+    background-color: red;
+    gap: 1rem;
+    &::before {
+      content: "* max length upto 10";
+      position: absolute;
+      transform: translateY(-100%);
+      color: grey;
+    }
+    &--button {
+      padding: 0.2rem 0.4rem;
+      border: none;
+      border: 1px solid grey;
+      display: none;
+    }
+  }
+  &__content {
+    width: 20rem;
+    min-height: 13rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $side-bar;
+    // background-color: green;
+    gap: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+}
+.create__tags {
+  width: 12rem;
+  padding: 0.2rem 0.4rem;
+  &::focus {
+    outline: none;
+  }
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+.tags__items--delete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5px;
+
+  &:hover {
+    color: red;
+  }
+}
+.tags__items--relative {
+  position: relative;
+  padding-right: 2rem;
+  &--buttons {
+    border: none;
+    cursor: pointer;
+  }
+}
+.publish__tag {
+  padding: 0.2rem 0.8rem;
+  // position: absolute;
+  // bottom: 5px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  cursor: pointer;
+}

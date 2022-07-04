@@ -1,4 +1,4 @@
-const block = (node) => {
+const block = (node, title) => {
   const arrayOfHtmlTag = node.map(({ type, children, ...args }, index) => {
     const markedTag = children.map((s, index) =>
       mark(s.text, index, ...Object.keys(s))
@@ -47,7 +47,9 @@ const block = (node) => {
         return headerTag;
       case "blockquote":
         headerTag = (
-          <blockquote className="plate-blockquote">{markedTag}</blockquote>
+          <blockquote key={index} className="plate-blockquote">
+            {markedTag}
+          </blockquote>
         );
         return headerTag;
       case "ul":
@@ -58,9 +60,11 @@ const block = (node) => {
             });
           });
         });
-        listData = reqData.map((s) => {
+        listData = reqData.map((s, index) => {
           return (
-            <li className="plate-ul-li">{mark(s.text, ...Object.keys(s))}</li>
+            <li key={index} className="plate-ul-li">
+              {mark(s.text, ...Object.keys(s))}
+            </li>
           );
         });
         headerTag = (
@@ -77,9 +81,11 @@ const block = (node) => {
             });
           });
         });
-        listData = reqData.map((s) => {
+        listData = reqData.map((s, index) => {
           return (
-            <li className="plate-ol-li">{mark(s.text, ...Object.keys(s))}</li>
+            <li key={index} className="plate-ol-li">
+              {mark(s.text, ...Object.keys(s))}
+            </li>
           );
         });
         headerTag = (
@@ -92,7 +98,17 @@ const block = (node) => {
         return "it does not enter here";
     }
   });
-  return arrayOfHtmlTag;
+  const header = <h1 key="23es76">{title}</h1>;
+  let miti = new Date();
+  miti = miti.toString();
+
+  const date = (
+    <p key="8257sd23" className="lowertitle">
+      <u>on {miti} by user</u>
+    </p>
+  );
+  // console.log([header, date, ...arrayOfHtmlTag]);
+  return [header, date, ...arrayOfHtmlTag];
 };
 const mark = (text, index, ...args) => {
   let returnValue;

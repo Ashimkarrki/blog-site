@@ -2,7 +2,6 @@
   min-height: 41.6rem;
   max-width: 40rem;
   margin: 0 auto;
-  margin-top: 5rem;
   padding: 3rem;
   &__input {
     border: none;
@@ -32,4 +31,25 @@
   color: grey;
   border-left: 3px solid grey;
   padding-left: 1rem;
+}
+.plate-ol-li,
+.plate-ul-li {
+  margin-left: 1rem;
+}
+.submit__buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  justify-content: space-between;
+  &--button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border: 1px grey solid;
+    border-radius: 1rem;
+  }
+}
+.lowertitle {
+  margin-bottom: 2rem;
 }

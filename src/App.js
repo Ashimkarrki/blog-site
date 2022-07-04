@@ -13,6 +13,7 @@ import { useLocation } from "react-router-dom";
 import ProtectedRouterSignedIn from "./component/ProtectedRouterSignedIn";
 import BookMark from "./Pages/BookMark";
 import Notification from "./Pages/Notification";
+import RenderBlog from "./component/RenderBlog";
 function App() {
   const [isSignedIn] = useState(true);
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
           <Route path="/bookmark" element={<BookMark />} />
           <Route path="/input" element={<Input />} />
           <Route path="/notification" element={<Notification />} />
+          <Route path="/renderedblog" element={<RenderBlog />} />
         </Route>
       </Routes>
 
