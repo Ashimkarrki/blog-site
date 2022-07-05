@@ -99,12 +99,17 @@ const block = (node, title) => {
     }
   });
   const header = <h1 key="23es76">{title}</h1>;
-  let miti = new Date();
-  miti = miti.toString();
-
+  let currentDate = new Date();
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  currentDate = currentDate.toLocaleDateString("en-us", options);
   const date = (
     <p key="8257sd23" className="lowertitle">
-      <u>on {miti} by user</u>
+      on {currentDate}
     </p>
   );
   // console.log([header, date, ...arrayOfHtmlTag]);

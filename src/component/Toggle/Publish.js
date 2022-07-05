@@ -29,7 +29,6 @@ const Publish = ({ setToggle }) => {
                   onClick={(e) => {
                     e.preventDefault();
                     dispatch(deleteTag(index));
-                    console.log("dispatch wallah button xalyo");
                   }}
                   className="tags__items--relative--buttons"
                 >
